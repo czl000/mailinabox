@@ -61,7 +61,7 @@ if [ $needs_update == 1 ]; then
 
 	# install roundcube
 	wget_verify \
-		https://github.com/roundcube/roundcubemail/releases/download/$VERSION/roundcubemail-$VERSION-complete.tar.gz \
+		https://github.com.cnpmjs.org/roundcube/roundcubemail/releases/download/$VERSION/roundcubemail-$VERSION-complete.tar.gz \
 		$HASH \
 		/tmp/roundcube.tgz
 	tar -C /usr/local/lib --no-same-owner -zxf /tmp/roundcube.tgz
@@ -70,14 +70,14 @@ if [ $needs_update == 1 ]; then
 	rm -f /tmp/roundcube.tgz
 
 	# install roundcube persistent_login plugin
-	git_clone https://github.com/mfreiholz/Roundcube-Persistent-Login-Plugin.git $PERSISTENT_LOGIN_VERSION '' ${RCM_PLUGIN_DIR}/persistent_login
+	git_clone https://github.com.cnpmjs.org/mfreiholz/Roundcube-Persistent-Login-Plugin.git $PERSISTENT_LOGIN_VERSION '' ${RCM_PLUGIN_DIR}/persistent_login
 
 	# install roundcube html5_notifier plugin
-	git_clone https://github.com/kitist/html5_notifier.git $HTML5_NOTIFIER_VERSION '' ${RCM_PLUGIN_DIR}/html5_notifier
+	git_clone https://github.com.cnpmjs.org/kitist/html5_notifier.git $HTML5_NOTIFIER_VERSION '' ${RCM_PLUGIN_DIR}/html5_notifier
 
 	# download and verify the full release of the carddav plugin
 	wget_verify \
-		https://github.com/blind-coder/rcmcarddav/releases/download/v${CARDDAV_VERSION}/carddav-${CARDDAV_VERSION}.zip \
+		https://github.com.cnpmjs.org/blind-coder/rcmcarddav/releases/download/v${CARDDAV_VERSION}/carddav-${CARDDAV_VERSION}.zip \
 		$CARDDAV_HASH \
 		/tmp/carddav.zip
 
